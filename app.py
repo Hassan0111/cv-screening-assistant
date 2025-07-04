@@ -288,9 +288,11 @@ def main():
         else:
             st.info("📤 Please upload and process CVs first to set the analysis range")
             num_candidates = st.slider("Number of candidates to analyze", 1, 20, 5, disabled=True)
-        
-        if job_description and st.button("🎯 Find Best Candidates", type="primary"):
-            if not hasattr(st.session_state.rag_system, 'cv_data') or not st.session_state.rag_system.cv_data:
+
+        if st.button("🎯 Find Best Candidates", type="primary"):
+            if not job_description:
+                st.error("❌ Please enter a job description first!")
+            elif not hasattr(st.session_state.rag_system, 'cv_data') or not st.session_state.rag_system.cv_data:
                 st.error("❌ Please upload and process CVs first!")
             else:
                 with st.spinner("Analyzing candidates..."):
@@ -298,6 +300,16 @@ def main():
                     st.session_state.results = results
                     st.session_state.job_description = job_description
                 st.success("✅ Analysis complete! Check the Results tab.")
+        
+        # if job_description and st.button("🎯 Find Best Candidates", type="primary"):
+        #     if not hasattr(st.session_state.rag_system, 'cv_data') or not st.session_state.rag_system.cv_data:
+        #         st.error("❌ Please upload and process CVs first!")
+        #     else:
+        #         with st.spinner("Analyzing candidates..."):
+        #             results = st.session_state.rag_system.rank_candidates(job_description, num_candidates)
+        #             st.session_state.results = results
+        #             st.session_state.job_description = job_description
+        #         st.success("✅ Analysis complete! Check the Results tab.")
     
     with tab3:
         st.header("📊 Candidate Rankings")
