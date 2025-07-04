@@ -12,7 +12,7 @@ import json
 
 # Configure page
 st.set_page_config(
-    page_title="CV Screening Assistant",
+    page_title="HIREX",
     page_icon="📄",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -197,8 +197,8 @@ class CVScreeningRAG:
         return analyzed_candidates
 
 def main():
-    st.title("🎯 AI-Powered CV Screening Assistant")
-    st.markdown("Upload CVs and job descriptions to find the best candidates using RAG + Google Gemini")
+    st.title("🎯 HIREX AI-Powered CV Screening Assistant")
+    st.markdown("Upload CVs and job descriptions to find the best candidates")
     
     # Sidebar for API key
     with st.sidebar:
@@ -232,7 +232,6 @@ def main():
         - **Maximum CVs**: ~100-200 CVs (depending on file size)
         - **File size limit**: 200MB per file
         - **Recommended**: Start with 20-50 CVs for optimal performance
-        - **API limit**: 15 requests/minute (free tier)
         """)
         
         uploaded_files = st.file_uploader(
