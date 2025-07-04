@@ -13,7 +13,7 @@ import json
 # Configure page
 st.set_page_config(
     page_title="HIREX",
-    page_icon="📄",
+    page_icon="🎯",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -197,7 +197,7 @@ class CVScreeningRAG:
         return analyzed_candidates
 
 def main():
-    st.title("🎯 HIREX AI-Powered CV Screening Assistant")
+    st.title("🎯 HIREX  AI-Powered CV Screening Assistant")
     st.markdown("Upload CVs and job descriptions to find the best candidates")
     
     # Sidebar for API key
