@@ -24,3 +24,5 @@ AI-powered CV screening tool using RAG + Google Gemini
 - PDF files for CVs
 
 Made by Hassan with Love.
+
+for commit.
