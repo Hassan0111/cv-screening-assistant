@@ -23,4 +23,4 @@ AI-powered CV screening tool using RAG + Google Gemini
 - Google Gemini API key
 - PDF files for CVs
 
-Made by Hassan with Love.
+Made by AI for Hassan with Love.
