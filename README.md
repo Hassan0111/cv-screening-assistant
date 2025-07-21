@@ -25,4 +25,3 @@ AI-powered CV screening tool using RAG + Google Gemini
 
 Made by AI for Hassan with Love.
 
-h
